@@ -1,7 +1,34 @@
 {
     "result": [
-      { "ticker": "BBAS3.SA" },
-      { "ticker": "BBSE3.SA" },
-      { "ticker": "PSSA3.SA" }
+      { 
+        "ticker": "BBAS3.SA",
+        "number": 41,
+        "averagePrice": 30.25
+      },
+      { 
+        "ticker": "BBSE3.SA",
+        "number": 32,
+        "averagePrice": 26.01
+      },
+      { 
+        "ticker": "PSSA3.SA" ,
+        "number": 38,
+        "averagePrice": 19.06
+      },
+      { 
+        "ticker": "BPAC11.SA" ,
+        "number": 29,
+        "averagePrice": 22.48
+      },
+      { 
+        "ticker": "AGRO3.SA" ,
+        "number": 14,
+        "averagePrice": 25.73
+      },
+      { 
+        "ticker": "EGIE3.SA" ,
+        "number": 44,
+        "averagePrice": 41.59
+      }
     ]
   }

@@ -1,6 +1,10 @@
+'use client'
+
+import Sidebar from '@/components/shared/sidebar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import styled from 'styled-components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +18,28 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+	const styles = {
+		margin: '0',
+		padding: '0',
+		height: '100vh',
+		display: 'grid',
+		gridTemplateColumns: '64px 1fr'
+	};
+
+	const MainStyled = styled.main`
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 50px 1fr;
+	`;
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+      <body className={inter.className} style={styles}>
+        <Sidebar></Sidebar>
+        <MainStyled>
+          {children}
+        </MainStyled>
+        </body>
     </html>
   )
 }

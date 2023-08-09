@@ -9,10 +9,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const tickers = stocksBr.result
         .map(x => x.ticker);
 
-    const fields = ["symbol", "displayName", "regularMarketPrice"];
+    const fields = ["symbol", "displayName", "regularMarketPrice", "longName", "regularMarketChangePercent"];
 
-    const results = await yahooFinance.quote(tickers,  
+    const results = await yahooFinance.quote(tickers,
         { fields: fields });
 
-    res.status(200).json(results)
+     const tickersMapped = results.map((ticker) => {
+        return {
+            ...ticker,
+            regularMarketChangePercent: ticker.regularMarketChangePercent?.toFixed(2)
+        }
+    })
+
+    res.status(200).json(tickersMapped)
 }
