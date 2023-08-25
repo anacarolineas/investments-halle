@@ -5,7 +5,10 @@ import type { NextRequest } from 'next/server'
 import { getSession } from "next-auth/react";
  
 export async function middleware(request: NextRequest, response: NextResponse) {
-   const requestForNextAuth: any = {
+  return; 
+
+  //para autenticação posterior
+  const requestForNextAuth: any = {
     headers: {
       cookie: request.headers.get("cookie"),
     },

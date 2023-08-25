@@ -1,25 +1,6 @@
 'use client'
 import { getSession, signOut, useSession } from "next-auth/react";
 
-export async function getServerSideProps(context) {
-  const session = await getSession(context);
-
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: {
-      session,
-    },
-  };
-}
-
 export default function Home() {
   const { data: session } = useSession();
 

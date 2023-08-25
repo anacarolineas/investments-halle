@@ -15,10 +15,13 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.4",
     "@prisma/client": "^5.1.1",
+    "formidable": "^3.5.0",
     "next": "13.4.12",
     "next-auth": "^4.23.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "uuid": "^9.0.0",
+    "xlsx": "^0.18.5",
     "yahoo-finance2": "^2.4.3"
   },
   "devDependencies": {
@@ -28,7 +31,8 @@
     "autoprefixer": "^10.4.15",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
-    "postcss": "^8.4.27",
+    "moment": "^2.29.4",
+    "postcss": "^8.4.28",
     "prisma": "^5.1.1",
     "styled-components": "^6.0.7",
     "tailwindcss": "^3.3.3",
